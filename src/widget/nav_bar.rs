@@ -25,7 +25,7 @@ pub type Model = segmented_button::SingleSelectModel;
 /// For details on the model, see the [`segmented_button`] module for more details.
 pub fn nav_bar<Message: Clone + 'static>(
     model: &segmented_button::SingleSelectModel,
-    on_activate: fn(segmented_button::Entity) -> Message,
+    on_activate: impl Fn(segmented_button::Entity) -> Message + 'static,
 ) -> NavBar<Message> {
     NavBar {
         segmented_button: segmented_button::vertical(model).on_activate(on_activate),
