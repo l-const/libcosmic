@@ -1,4 +1,4 @@
 [submodule "iced"]
 	path = iced
-	url = https://github.com/pop-os/iced.git
-	branch = master
+	url = https://github.com/l-const/iced.git
+	branch = consecutive-click-distance
